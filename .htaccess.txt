@@ -1,0 +1,8 @@
+RewriteEngine on
+RewriteCond % {SCRIPT_FILENAME} !-f
+RewriteCond % {SCRIPT_FILENAME} !-D
+
+RewriteRule ^(.*)$ index.php?url=$1
+
+#desabilitar a listagem de pasta do servidor.
+Options -Indexes
