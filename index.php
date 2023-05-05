@@ -23,16 +23,25 @@
         }
 
     } elseif ($_SERVER['REDIRECT_URL'] === '/remover-video') {
-        require_once  'app/remover-video.php';
+        //require_once  'app/remover-video.php';
+        $controller = new \Alura\Mvc\Controller\VideoDeleteController();
+        $controller->processaRequisicao();
     }
     elseif($_SERVER['REDIRECT_URL'] === '/loginValidate'){
-        require_once 'app/loginValidate.php';
+       // require_once 'app/loginValidate.php';
+        $controller =  new \Alura\Mvc\Controller\loginController();
+        $controller->processaRequisicao();
     }
     elseif($_SERVER['REDIRECT_URL'] === '/logout'){
-        require_once 'app/logout.php';
+        //require_once 'app/logout.php';
+        $controller = new \Alura\Mvc\Controller\loginController();
+        $controller->logout();
     }
     else {
-        require_once 'app/exibicao-videos.php';
+
+        $controller = new \Alura\Mvc\Controller\VideoListController();
+        $controller->processaRequisicao();
+       // require_once 'app/exibicao-videos.php';
         //abaixo alternativa para direcionar para 404 caso endereço não exista
         //http_response_code(404);
     }
