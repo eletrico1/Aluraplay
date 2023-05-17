@@ -4,7 +4,7 @@
     use PDO;
     use PDOException;
 
-    class VideoListController
+    class VideoListController implements Controller
     {
         private VideoRepository $videoRepository;
 
@@ -32,28 +32,6 @@
         public function processaRequisicao():void
         {
             $videoList = $this->videoRepository->all();
-             require_once 'app/inicio-html.php';
-             ?>
-    <ul class="videos__container">
-        <?php foreach ($videoList as $video): ?>
-
-        <li class="videos__item">
-            <iframe width="100%" height="72%" src="<?= $video->url; ?>"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-            <div class="descricao-video">
-                <h3><?= $video->title; ?></h3>
-                <div class="acoes-video">
-                    <a href="/edit?id=<?= $video->id ;?>">Editar</a>
-                    <a href="/remover-video?id=<?= $video->id ; ?>">Excluir</a>
-                </div>
-            </div>
-        </li>
-
-       <?php endforeach ?>
-    </ul>
-<?php include_once 'app/fim-html.php';
-
+            require_once 'templates/videoList.php';
         }
     }

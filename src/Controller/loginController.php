@@ -4,7 +4,7 @@
     use Alura\Mvc\Repository\VideoRepository;
     use PDO;
 
-    class loginController
+    class loginController implements Controller
     {
         private VideoRepository $videoRepository;
 

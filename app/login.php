@@ -76,6 +76,7 @@ integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CX
         </div>
             <a href="criarConta.php"> Não possui acesso? Crie um aqui!</a>
         </div>
-<?php include_once 'fim-html.php'?>
+<?php
+    include_once 'templates/fim-html.php' ?>
 </body>
 </html>

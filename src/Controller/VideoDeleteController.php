@@ -5,7 +5,7 @@
     use PDO;
     use PDOException;
 
-    class VideoDeleteController
+    class VideoDeleteController implements Controller
     {
          private VideoRepository $videoRepository;
         public function __construct()

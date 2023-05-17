@@ -34,7 +34,7 @@ $video = [
         echo "<script>window.location = '/' </script>";
     }
 ?>
-<?php include_once 'inicio-html.php'; ?>
+<?php include_once 'templates/inicio-html.php'; ?>
 
     <main class="container">
         <form class="container__formulario"
@@ -61,4 +61,4 @@ $video = [
                 </div>
 
                 <input class="formulario__botao" type="submit" value="Enviar" />
-      <?php include_once 'fim-html.php'; ?>
+      <?php include_once 'templates/fim-html.php'; ?>
