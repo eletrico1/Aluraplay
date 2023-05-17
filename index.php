@@ -48,7 +48,5 @@
         //http_response_code(404);
     }
     error_reporting(E_ALL ^ E_ALL);
-
-
   $controller->processaRequisicao();
 

@@ -21,11 +21,11 @@
     <header>
 
         <nav class="cabecalho">
-            <a class="logo" href="../index.php"></a>
+            <a class="logo" href="/autenticado"></a>
 
             <div class="cabecalho__icones">
-                <a href="../index.php" class="cabecalho__videos"></a>
-                <a href="../index.php" class="cabecalho__sair">Sair</a>
+                <a href="/form" class="cabecalho__videos"></a>
+                <a href="/logout" class="cabecalho__sair">Sair</a>
             </div>
         </nav>
 

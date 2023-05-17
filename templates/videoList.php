@@ -1,6 +1,18 @@
 <?php
 require_once 'templates/inicio-html.php';
+
+    session_start() ;
+    if(isset($_SESSION["usuario"]) && is_array($_SESSION["usuario"])){
+        $adm = $_SESSION["usuario"][1];
+        $nome = $_SESSION["usuario"][0];
+
+    } else {
+        echo "<script>window.location = '/' </script>";
+    }
+
 ?>
+?>
+
 <ul class="videos__container">
     <?php foreach ($videoList as $video): ?>
 
