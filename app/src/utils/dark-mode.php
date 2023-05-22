@@ -94,7 +94,7 @@
 
        document.addEventListener("keypress", function(event){
          var keyName = event.key;
-         if ((keyName == 'd') || (keyName == 'D')) {
+         if ((keyName == '') || (keyName == '')) {
            toggle_btn.click();
          }
        });

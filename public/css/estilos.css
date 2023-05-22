@@ -10,7 +10,7 @@
 }
 
 body {
-    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-family: Poppins;
     background-color: var(--azul-claro);
     position: relative;
     width: 100%;
@@ -132,4 +132,12 @@ color: lightgray;
 }
 .form-control form-control-lg{
     background-color: white;
+}
+.descricao-video a{
+    font-family: Poppins;
+
+}
+.descricao-video h3{
+    font-family: Poppins;
+
 }

@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="../../public/css/reset.css">
     <link rel="stylesheet" href="../../public/css/estilos.css">
     <link rel="stylesheet" href="../../public/css/estilos-form.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap" rel="stylesheet">
+    <!-- FONTS -->
 
     <link rel="stylesheet" href="../../public/css/flexbox.css">
     <title>AluraPlay</title>
