@@ -1,5 +1,5 @@
 <?php
-require_once 'templates/inicio-html.php';
+require_once 'app/templates/inicio-html.php';
 
     session_start() ;
     if(isset($_SESSION["usuario"]) && is_array($_SESSION["usuario"])){
@@ -32,4 +32,4 @@ require_once 'templates/inicio-html.php';
 
     <?php endforeach ?>
 </ul>
-<?php include_once 'templates/fim-html.php';
+<?php include_once 'app/templates/fim-html.php';

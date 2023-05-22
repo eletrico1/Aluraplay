@@ -15,11 +15,13 @@ if(isset($_POST["email"]) && isset($_POST["senha"]) && $conexao != null  ) {
     } else{
         //tratamento de erro com javascript em caso de login não passar
         echo "<script>alert('Usuário ou senha invalidos');</script>";
-        echo "<script>window.location = '../../index.php' </script>";
+        echo "<script>window.location = '../../../../index.php' </script>";
 
     }
 } else {
     //tratamento de erro com javascript em caso de login não passar
+    var_dump($_SESSION);
+    die();
     echo "<script>alert('Usuário ou senha invalidos');</script>";
-    echo "<script>window.location = '../../index.php' </script>";
+    echo "<script>window.location = '../../../../index.php' </script>";
 }

@@ -1,6 +1,7 @@
 {
   "autoload":{
-  "psr-4": { "Alura\\Mvc\\": "src/"}
+  "psr-4": { "Alura\\Mvc\\": "app/src"
+  }
   },
   "require": {
     "ext-pdo": "*",

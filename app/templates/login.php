@@ -1,5 +1,5 @@
 <?php
-    include_once 'dark-mode.php';
+    include_once 'app/src/utils/dark-mode.php';
     header('Expires: Sun, 01 Jan 2014 00:00:00 GMT');
     header('Cache-Control: no-store, no-cache, must-revalidate');
     header('Cache-Control: post-check=0, pre-check=0', FALSE);
@@ -15,9 +15,9 @@
     -->
   <!-- Abaixo Link CSS -->
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../public/css/reset.css">
-<link rel="stylesheet" href="../public/css/estilos.css">
-<link rel="stylesheet" href="../public/css/estilos-form.css">
+<link rel="stylesheet" href="../../public/css/reset.css">
+<link rel="stylesheet" href="../../public/css/estilos.css">
+<link rel="stylesheet" href="../../public/css/estilos-form.css">
 
     <!-- Inform modern browsers that this page supports both dark and light color schemes,
     and the page author prefers light. -->
@@ -74,9 +74,9 @@ integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CX
                 <br>
                 <button type="submit" class="btn btn-success btn-lg" value="enviar" name="enviar">Entrar</button>
         </div>
-            <a href="criarConta.php"> Não possui acesso? Crie um aqui!</a>
+            <a href="../../index.php"> Não possui acesso? Crie um aqui!</a>
         </div>
 <?php
-    include_once 'templates/fim-html.php' ?>
+    include_once 'app/templates/fim-html.php' ?>
 </body>
 </html>

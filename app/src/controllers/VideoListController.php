@@ -3,7 +3,7 @@
     use Alura\Mvc\Repository\VideoRepository;
     use PDO;
     use PDOException;
-
+    include_once 'app/src/Repository/VideoRepository.php';
     class VideoListController implements Controller
     {
         private VideoRepository $videoRepository;
@@ -32,6 +32,6 @@
         public function processaRequisicao():void
         {
             $videoList = $this->videoRepository->all();
-            require_once 'templates/videoList.php';
+            require_once 'app/templates/videoList.php';
         }
     }

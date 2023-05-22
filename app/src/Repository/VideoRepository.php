@@ -1,6 +1,7 @@
 <?php
     namespace Alura\Mvc\Repository;
     use Alura\Mvc\Entity\Video;
+    include_once 'app/src/Entity/Video.php';
     class VideoRepository
     {
         public function __construct(private \PDO $conexao)

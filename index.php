@@ -9,23 +9,27 @@
     use Alura\Mvc\Controller\VideoListController;
     use Alura\Mvc\Repository\VideoRepository;
 
+    require_once 'app/src/controllers/loginController.php';
+    require_once 'app/src/controllers/VideoDeleteController.php';
+    require_once 'app/src/controllers/VideoListController.php';
+
     require_once 'vendor/autoload.php';
     require_once 'app/conexao.php';
 
     if (!array_key_exists('REDIRECT_URL', $_SERVER) || $_SERVER['REDIRECT_URL'] === '/') {
-        require_once 'app/login.php';
+        require_once 'app/templates/login.php';
     } elseif ($_SERVER['REDIRECT_URL'] === '/form') {
         if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-            require_once 'app/formulario.php';
+            require_once 'app/templates/videoForm.php';
         } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            require_once  'app/novo-video.php';
+            require_once 'app/src/models/novo-video.php';
         }
 
     } elseif ($_SERVER['REDIRECT_URL'] === '/edit') {
         if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-            require_once 'app/formulario.php';
+            require_once 'app/templates/videoForm.php';
         } elseif ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            require_once 'app/editar-video.php';
+            require_once 'app/src/models/editar-video.php';
         }
 
     } elseif ($_SERVER['REDIRECT_URL'] === '/remover-video') {
@@ -49,4 +53,3 @@
     }
     error_reporting(E_ALL ^ E_ALL);
   $controller->processaRequisicao();
-

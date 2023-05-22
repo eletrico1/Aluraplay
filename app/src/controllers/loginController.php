@@ -1,9 +1,9 @@
 <?php
-
     namespace Alura\Mvc\Controller;
     use Alura\Mvc\Repository\VideoRepository;
     use PDO;
-
+    include_once 'app/src/controllers/Controller.php';
+    include_once 'app/src/Repository/VideoRepository.php';
     class loginController implements Controller
     {
         private VideoRepository $videoRepository;
@@ -30,8 +30,6 @@
 
         public function processaRequisicao(): void
         {
-
-            //passo 1 conexao db
             $server = "127.0.0.1";
             $usuario = "root";
             $senha = "";
@@ -46,31 +44,8 @@
                 echo "Ocorreu erro conexao : {$erro->getMessage()}";
                 $conexao = null;
             }
-
-            if(isset($_POST["email"]) && isset($_POST["senha"]) && $conexao != null  ) {
-                $query = $conexao->prepare("SELECT * FROM usuarios WHERE email = ? AND senha = ? ");
-                $query->execute(array($_POST["email"], $_POST["senha"]));
-                if ($query->rowCount()){
-                    $user = $query->fetchAll(PDO::FETCH_ASSOC)[0];
-                    session_start();
-                    $_SESSION["usuario"] = array($user["nome"], $user["adm"]);
-                    if ($user["adm"] == "1"){
-                        echo "<script>window.location = '/autenticado' </script>";
-                    } else {
-                        echo "<script>window.location = '/autenticado' </script>";
-                    }
-                    //abaixo chamando redirect via javascript
-                } else{
-                    //tratamento de erro com javascript em caso de login não passar
-                    echo "<script>alert('Usuário ou senha invalidos');</script>";
-                    echo "<script>window.location = '../../index.php' </script>";
-
-                }
-            } else {
-                //tratamento de erro com javascript em caso de login não passar
-                echo "<script>alert('Usuário ou senha invalidos');</script>";
-                echo "<script>window.location = '../../index.php' </script>";
-            }
+            $this->videoRepository = new VideoRepository($conexao);
+            require_once 'app/src/models/loginValidate.php';
 
         }
 
