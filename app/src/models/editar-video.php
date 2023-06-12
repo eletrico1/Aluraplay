@@ -25,10 +25,10 @@ if ($titulo === false) {
         ///transformar $results de array para string abaixo
         $resultString = implode("",$results);
 
-$video = new \Alura\Mvc\Entity\Video($url1,$titulo);
+$video = new \ytoShare\Mvc\Entity\Video($url1,$titulo);
 $video->setId($resultString);
 
-$repository = new Alura\Mvc\Repository\VideoRepository($conexao);
+$repository = new ytoShare\Mvc\Repository\VideoRepository($conexao);
 $repository->update($video);
 
 if ($repository->update($video) === false) {

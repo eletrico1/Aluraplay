@@ -7,7 +7,7 @@
     }
   ],
   "autoload":{
-  "psr-4": { "Alura\\Mvc\\": "app/src"
+  "psr-4": { "ytoShare\\Mvc\\": "app/src"
   }
   },
   "require": {

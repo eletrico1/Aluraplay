@@ -1,6 +1,6 @@
 <?php
-    namespace Alura\Mvc\Controller;
-    use Alura\Mvc\Repository\VideoRepository;
+    namespace ytoShare\Mvc\Controller;
+    use ytoShare\Mvc\Repository\VideoRepository;
 
     $repository = new VideoRepository($conexao);
     $videoList  = $repository->all();

@@ -1,6 +1,6 @@
 <?php
-    namespace Alura\Mvc\Repository;
-    use Alura\Mvc\Entity\Video;
+    namespace ytoShare\Mvc\Repository;
+    use ytoShare\Mvc\Entity\Video;
     include_once 'app/src/Entity/Video.php';
     class VideoRepository
     {

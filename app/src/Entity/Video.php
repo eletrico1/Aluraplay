@@ -1,6 +1,6 @@
 <?php
 
-    namespace Alura\Mvc\Entity;
+    namespace ytoShare\Mvc\Entity;
 
     class Video
     {

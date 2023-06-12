@@ -1,9 +1,9 @@
 <?php
 
-    namespace Alura\Mvc\Controller;
-    use Alura\Mvc\Controller\Controller;
+    namespace ytoShare\Mvc\Controller;
+    use ytoShare\Mvc\Controller\Controller;
     include_once 'Controller.php';
-    use Alura\Mvc\Repository\VideoRepository;
+    use ytoShare\Mvc\Repository\VideoRepository;
     use PDO;
     use PDOException;
 

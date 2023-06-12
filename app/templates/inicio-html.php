@@ -9,17 +9,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/reset.css">
     <link rel="stylesheet" href="../../public/css/estilos.css">
     <link rel="stylesheet" href="../../public/css/estilos-form.css">
+    <link rel="stylesheet" href="../../public/css/flexbox.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap" rel="stylesheet">
     <!-- FONTS -->
 
-    <link rel="stylesheet" href="../../public/css/flexbox.css">
-    <title>AluraPlay</title>
-    <link rel="shortcut icon" href="../../public/img/favicon.ico" type="image/x-icon">
+    <title>ytoShare</title>
+    <link rel="shortcut icon" href="../../public/img/cabecalho/video_call.png" type="image/x-icon">
 </head>
 
 <body>
@@ -46,7 +48,7 @@
                     }
                     if($adm == 1):
                 ?>
-                <a href="/users" class="users"> Usuários Cadastrados</a>
+                <a href="/users" class="users">Gestão Usuários</a>
                   <?php
                     endif;?>
 

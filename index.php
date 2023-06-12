@@ -3,12 +3,12 @@
 //Index possui o papel de controller, sendo assim, os demais arquivos e regras php ficam no diretório "app"
     //Através da configuração Definida no .htacess a leitura dos arquivos é bloqueada por segurança
     declare(strict_types=1);
-    use Alura\Mvc\Controller\Controller;
-    use Alura\Mvc\Controller\loginController;
-    use Alura\Mvc\Controller\usuariosController;
-    use Alura\Mvc\Controller\VideoDeleteController;
-    use Alura\Mvc\Controller\VideoListController;
-    use Alura\Mvc\Repository\VideoRepository;
+    use ytoShare\Mvc\Controller\Controller;
+    use ytoShare\Mvc\Controller\loginController;
+    use ytoShare\Mvc\Controller\usuariosController;
+    use ytoShare\Mvc\Controller\VideoDeleteController;
+    use ytoShare\Mvc\Controller\VideoListController;
+    use ytoShare\Mvc\Repository\VideoRepository;
 
     require_once 'app/src/controllers/loginController.php';
     require_once 'app/src/controllers/VideoDeleteController.php';

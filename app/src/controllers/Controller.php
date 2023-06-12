@@ -1,6 +1,6 @@
 <?php
 
-    namespace Alura\Mvc\Controller;
+    namespace ytoShare\Mvc\Controller;
 
     interface Controller 
     {

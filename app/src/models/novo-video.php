@@ -1,7 +1,7 @@
 <?php
 
-    use Alura\Mvc\Entity\Video;
-    use Alura\Mvc\Repository\VideoRepository;
+    use ytoShare\Mvc\Entity\Video;
+    use ytoShare\Mvc\Repository\VideoRepository;
 
 $url1 = filter_input(INPUT_POST, 'url1', FILTER_VALIDATE_URL);
 if ($url1 === false) {

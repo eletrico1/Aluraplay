@@ -20,11 +20,13 @@
 }
 
 .formulario__titulo {
-    color: var(--azul-medio);
+    color: 	#ffbdbd	;
     font-weight: bold;
     font-size: 21px;
 }
-
+.form-control form-control-lg{
+    background-color: white;
+}
 .campo__escrita {
     width: 50vw;
     border-radius: 24px;
@@ -37,12 +39,12 @@
     line-height: 1.5;
     padding: 0 0 .1em 1em;
     font-weight: 700;
-    color: var(--azul-medio);
+    color: 	#ffbdbd	;
 }
 
 .formulario__botao {
     padding: 1em 3em;
     margin: 2em 0;
     border-radius: 24px;
-    background-color: var(--azul-escuro);
+    background-color:	#ffbdbd;
 }
