@@ -11,10 +11,11 @@ require_once 'app/templates/inicio-html.php';
     }
 
 ?>
-?>
+
 
 <ul class="videos__container">
-    <?php foreach ($videoList as $video): ?>
+    <?php foreach ($videoList as $video):
+        ?>
 
         <li class="videos__item">
             <iframe width="100%" height="72%" src="<?= $video->url; ?>"

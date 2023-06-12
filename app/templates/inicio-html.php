@@ -2,6 +2,9 @@
 <html lang="pt-br">
 
 <head>
+    <?php
+    include_once 'app/src/models/loginValidate.php';
+    ?>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,9 +27,29 @@
     <header>
 
         <nav class="cabecalho">
+
             <a class="logo" href="/autenticado"></a>
 
+
             <div class="cabecalho__icones">
+                <?php
+      //abaixo temos validação caso o usuário seja administrador, o botão de Listagem de usuários será exibido
+                    if ($_SESSION == null || '') {
+                        session_start();
+                        if (isset($_SESSION["usuario"]) && is_array($_SESSION["usuario"])) {
+                            $adm = $_SESSION["usuario"][1];
+                            $nome = $_SESSION["usuario"][0];
+
+                        } else {
+                            echo "<script>window.location = '/' </script>";
+                        }
+                    }
+                    if($adm == 1):
+                ?>
+                <a href="/users" class="users"> Usuários Cadastrados</a>
+                  <?php
+                    endif;?>
+
                 <a href="/form" class="cabecalho__videos"></a>
                 <a href="/logout" class="cabecalho__sair">Sair</a>
             </div>

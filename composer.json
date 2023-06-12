@@ -1,4 +1,11 @@
 {
+  "authors": [
+    {
+      "name": "Allan Fernandes",
+      "email": "allanfernandesti@gmail.com",
+      "homepage": "https://github.com/eletrico1/"
+    }
+  ],
   "autoload":{
   "psr-4": { "Alura\\Mvc\\": "app/src"
   }
@@ -6,6 +13,5 @@
   "require": {
     "ext-pdo": "*",
     "php": ">=8.1"
-
   }
 }

@@ -1,16 +1,17 @@
 <?php
+
     namespace Alura\Mvc\Controller;
+    use Alura\Mvc\Controller\Controller;
+    include_once 'Controller.php';
     use Alura\Mvc\Repository\VideoRepository;
     use PDO;
     use PDOException;
-    include_once 'app/src/controllers/Controller.php';
-    include_once 'app/src/Repository/VideoRepository.php';
-    final class loginController implements Controller
-    {
-        private VideoRepository $videoRepository;
 
+    final class usuariosController implements Controller
+    {
         public function __construct()
         {
+            //passo 1 conexao db
             $server = "127.0.0.1";
             $usuario = "root";
             $senha = "";
@@ -25,11 +26,9 @@
                 echo "Ocorreu erro conexao : {$erro->getMessage()}";
                 $conexao = null;
             }
-            $this->videoRepository = new VideoRepository($conexao);
 
         }
-
-        public function processaRequisicao(): void
+        public function processaRequisicao():void
         {
             $server = "127.0.0.1";
             $usuario = "root";
@@ -45,15 +44,6 @@
                 echo "Ocorreu erro conexao : {$erro->getMessage()}";
                 $conexao = null;
             }
-            $this->videoRepository = new VideoRepository($conexao);
-            require_once 'app/src/models/loginValidate.php';
-
-        }
-
-        public function logout() :void
-        {
-            session_start();
-            session_destroy();
-            echo "<script>window.location = '/' </script>";
+            require_once 'app/templates/usuarios.php';
         }
     }

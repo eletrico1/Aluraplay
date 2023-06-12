@@ -7,9 +7,9 @@ if(isset($_POST["email"]) && isset($_POST["senha"]) && $conexao != null  ) {
         session_start();
         $_SESSION["usuario"] = array($user["nome"], $user["adm"]);
         if ($user["adm"] == "1"){
-            echo "<script>window.location = '/autenticado' </script>";
+            echo "<script>window.location = '/administradorLogado' </script>";
         } else {
-            echo "<script>window.location = '/autenticado' </script>";
+            echo "<script>window.location = '/usuarioLogado' </script>";
         }
             //abaixo chamando redirect via javascript
     } else{
@@ -20,8 +20,6 @@ if(isset($_POST["email"]) && isset($_POST["senha"]) && $conexao != null  ) {
     }
 } else {
     //tratamento de erro com javascript em caso de login não passar
-    var_dump($_SESSION);
-    die();
-    echo "<script>alert('Usuário ou senha invalidos');</script>";
-    echo "<script>window.location = '../../../../index.php' </script>";
+
+    require_once 'index.php';
 }

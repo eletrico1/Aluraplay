@@ -33,6 +33,13 @@ body {
     padding: 0 25px;
     z-index: 2;
 }
+.users{
+    color: white;
+  padding: 6px;
+    background-color: #15457f;
+    border-radius: 10px;
+    margin-right: 10px;
+}
 
 .logo {
     background-image: url(../img/images.png);

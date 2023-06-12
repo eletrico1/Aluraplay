@@ -5,6 +5,7 @@
     declare(strict_types=1);
     use Alura\Mvc\Controller\Controller;
     use Alura\Mvc\Controller\loginController;
+    use Alura\Mvc\Controller\usuariosController;
     use Alura\Mvc\Controller\VideoDeleteController;
     use Alura\Mvc\Controller\VideoListController;
     use Alura\Mvc\Repository\VideoRepository;
@@ -12,7 +13,7 @@
     require_once 'app/src/controllers/loginController.php';
     require_once 'app/src/controllers/VideoDeleteController.php';
     require_once 'app/src/controllers/VideoListController.php';
-
+    require_once 'app/src/controllers/usuariosController.php';
     require_once 'vendor/autoload.php';
     require_once 'app/conexao.php';
 
@@ -39,11 +40,15 @@
     elseif($_SERVER['REDIRECT_URL'] === '/loginValidate'){
        // require_once 'app/loginValidate.php';
         $controller =  new loginController();
+
     }
     elseif($_SERVER['REDIRECT_URL'] === '/logout'){
         //require_once 'app/logout.php';
         $controller = new loginController();
         $controller->logout();
+    }
+    elseif ($_SERVER['REDIRECT_URL'] === '/users'){
+        $controller = new usuariosController();
     }
     else {
         $controller = new VideoListController();
