@@ -6,7 +6,7 @@ if(isset($_POST["email"]) && isset($_POST["senha"]) && $conexao != null  ) {
         $user = $query->fetchAll(PDO::FETCH_ASSOC)[0];
         session_start();
         $_SESSION["usuario"] = array($user["nome"], $user["adm"]);
-        if($_POST['email'] == null || ''){
+        if ($_POST["email"]  == null  || ''){
             echo "<script>alert('Preencha Corretamente os dados');</script>";
             echo "<script>window.location = '../../../../index.php' </script>";
         }
@@ -14,14 +14,13 @@ if(isset($_POST["email"]) && isset($_POST["senha"]) && $conexao != null  ) {
             echo "<script>window.location = '/administradorLogado' </script>";
         }
 
-        if($user["adm"] == "0") {
-            echo "<script>window.location = '/usuarioLogado' </script>";
+       if ($user["adm"] == "0") {
+            echo "<script>window.location = '/usuarioLogado' </scri§pt>";
         }
-
-
             //abaixo chamando redirect via javascript
     } else{
         //tratamento de erro com javascript em caso de login não passar
+        var_dump($_POST);die();
         echo "<script>alert('Usuário ou senha invalidos');</script>";
         echo "<script>window.location = '../../../../index.php' </script>";
 

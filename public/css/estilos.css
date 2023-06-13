@@ -156,11 +156,7 @@ color: #c9c9ff;
     color: #b2b2f6;
     font-family: Poppins;
 }
-#divForm:hover{
-    background-color:cyan;
-    color: #b2b2f6;
-    font-family: Poppins;
-}
+
 #divForm button{
     background-color: #c9c9ff ;
     border-color: #c9c9ff;
