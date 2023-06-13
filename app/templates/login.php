@@ -67,7 +67,7 @@ integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CX
         <div id="divForm">
         <div class="container-sm">
             <form action="/loginValidate" method="post">
-                <h1>Abaixo faça o login abaixo </h1>
+                <h1>Faça o login abaixo </h1>
                 <input class="form-control form-control-lg" type="text"  id="email" name="email" placeholder="Email" aria-label="default input example">
                 <br>
                 <input class="form-control form-control-lg" type="password"  id="senha" name="senha" placeholder="Senha" aria-label="default input example">

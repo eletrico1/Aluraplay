@@ -6,11 +6,19 @@ if(isset($_POST["email"]) && isset($_POST["senha"]) && $conexao != null  ) {
         $user = $query->fetchAll(PDO::FETCH_ASSOC)[0];
         session_start();
         $_SESSION["usuario"] = array($user["nome"], $user["adm"]);
+        if($_POST['email'] == null || ''){
+            echo "<script>alert('Preencha Corretamente os dados');</script>";
+            echo "<script>window.location = '../../../../index.php' </script>";
+        }
         if ($user["adm"] == "1"){
             echo "<script>window.location = '/administradorLogado' </script>";
-        } else {
+        }
+
+        if($user["adm"] == "0") {
             echo "<script>window.location = '/usuarioLogado' </script>";
         }
+
+
             //abaixo chamando redirect via javascript
     } else{
         //tratamento de erro com javascript em caso de login não passar

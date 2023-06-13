@@ -135,9 +135,11 @@ body {
     }
 
 }
+
 #divForm{
     height: 60%;
     margin-top: 10%;
+
 }
 #divForm a{
 color: lightgray;
@@ -145,7 +147,24 @@ color: lightgray;
     font-size: 14px;
     margin-left: 75%;
 }
-
+#divForm h1{
+color: #c9c9ff;
+    font-family: Poppins;
+}
+#divForm input{
+    background-color:#ffffff;
+    color: #b2b2f6;
+    font-family: Poppins;
+}
+#divForm:hover{
+    background-color:cyan;
+    color: #b2b2f6;
+    font-family: Poppins;
+}
+#divForm button{
+    background-color: #c9c9ff ;
+    border-color: #c9c9ff;
+}
 .descricao-video a{
     font-family: Poppins;
 
