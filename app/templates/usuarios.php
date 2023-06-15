@@ -12,9 +12,9 @@
 </head>
 
 <body>
-<div class="container">
+<div class="container-md">
     <h1>Listar Usuários</h1>
-    <table id="datatable" class="display" style="width:100%">
+    <table id="datatable" class="display" >
         <thead>
             <tr>
                 <th>id</th>
@@ -22,7 +22,7 @@
                 <th>Salário</th>
                 <th>Idade</th>
                 <th>Email</th>
-                <th>senha</th>
+                <th>adm</th>
             </tr>
         </thead>
     </table>
@@ -35,7 +35,7 @@ $(document).ready(function() {
     $('#datatable').DataTable({
                 "processing": true,
                 "serverSide": true,
-                "ajax": "listar_usuarios.php",
+                "ajax": "app/src/utils/datatable_listar",
                 language: {
         url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/pt-BR.json',}
             });

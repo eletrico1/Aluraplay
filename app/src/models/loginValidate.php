@@ -15,12 +15,11 @@ if(isset($_POST["email"]) && isset($_POST["senha"]) && $conexao != null  ) {
         }
 
        if ($user["adm"] == "0") {
-            echo "<script>window.location = '/usuarioLogado' </scri§pt>";
+            echo "<script>window.location = '/usuarioLogado' </script>";
         }
             //abaixo chamando redirect via javascript
     } else{
         //tratamento de erro com javascript em caso de login não passar
-        var_dump($_POST);die();
         echo "<script>alert('Usuário ou senha invalidos');</script>";
         echo "<script>window.location = '../../../../index.php' </script>";
 
