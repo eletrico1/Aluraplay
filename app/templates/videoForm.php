@@ -1,5 +1,6 @@
 <?php
-
+    $conexao = new Database();
+    $con = $conexao->conectar();
     $id = filter_input(INPUT_GET, 'id',FILTER_VALIDATE_INT);
     $video = [
         'url' => '',
@@ -19,7 +20,7 @@
         $query = 'SELECT * FROM videos WHERE id = :resultString';
 //condicional abaixo ocorre apenas na tela de edição pois a variavel resultstring é diferente de vazio
         if ( $resultString !== '') {
-            $statement = $conexao->prepare($query);
+            $statement = $con->prepare($query);
             $statement->bindValue(':resultString', $resultString, PDO::PARAM_INT);
             $statement->execute();
             $video = $statement->fetch(\PDO::FETCH_ASSOC);

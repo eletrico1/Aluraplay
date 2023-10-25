@@ -1,41 +1,13 @@
 <?php
-
-// Incluir a conexao com o banco de dados
-
-
-    //passo 1 conexao db
-    $server = "127.0.0.1";
-    $usuario = "root";
-    $senha = "";
-    $banco = "course_php";
-
-    //lista de colunas
-    $colunas = [
-        0=>'id',
-        1=>'nome',
-        2=>'salario',
-        3=>'idade',
-        4=>'email',
-        5=>'adm'
-    ];
-
-    try {
-        $conexao = new PDO('mysql:host=localhost;dbname=course_php', $usuario, $senha);
-        //abaixo tratamento de erro
-        $conexao->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        //abaixo exibe tratamento de erro
-    } catch (PDOException $erro) {
-        echo "Ocorreu erro conexao : {$erro->getMessage()}";
-        $conexao = null;
-    }
-
-
+include_once ("../../conexao.php");
+$conexao = new Database();
+$con = $conexao->conectar();
 //Receber os dados da requisão
     $dados_requisicao = $_REQUEST;
 
 // Obter a quantidade de registros no banco de dados
     $query_qnt_usuarios = "SELECT COUNT(id) AS qnt_usuarios FROM usuarios";
-    $result_qnt_usuarios = $conexao->prepare($query_qnt_usuarios);
+    $result_qnt_usuarios = $con->prepare($query_qnt_usuarios);
     $result_qnt_usuarios->execute();
     $row_qnt_usuarios = $result_qnt_usuarios->fetch(PDO::FETCH_ASSOC);
 //var_dump($row_qnt_usuarios);
@@ -47,7 +19,7 @@
                     LIMIT :inicio , :quantidade"; //LIMIT :inicio, :quantidade
    // var_dump($query_usuarios);
 
-    $result_usuarios = $conexao->prepare($query_usuarios);
+    $result_usuarios = $con->prepare($query_usuarios);
    // var_dump($result_usuarios);
     $result_usuarios->bindParam(':inicio', $dados_requisicao['start'], PDO::PARAM_INT);
     $result_usuarios->bindParam(':quantidade', $dados_requisicao['length'], PDO::PARAM_INT);
@@ -76,6 +48,5 @@
     ];
 
 //var_dump($resultado);
-
 // Retornar os dados em formato de objeto para o JavaScript
     echo json_encode($resultado);

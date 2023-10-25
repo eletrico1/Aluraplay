@@ -1,6 +1,7 @@
 <?php
 
-
+$conexao = new Database();
+$con = $conexao->conectar();
 $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
 if ($id === false) {
     header('Location: /Acao?sucesso=0');
@@ -28,7 +29,7 @@ if ($titulo === false) {
 $video = new \ytoShare\Mvc\Entity\Video($url1,$titulo);
 $video->setId($resultString);
 
-$repository = new ytoShare\Mvc\Repository\VideoRepository($conexao);
+$repository = new ytoShare\Mvc\Repository\VideoRepository($con);
 $repository->update($video);
 
 if ($repository->update($video) === false) {
