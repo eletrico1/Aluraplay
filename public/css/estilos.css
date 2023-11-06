@@ -1,6 +1,5 @@
-*,
-*::before,
-*::after {
+/* Variáveis CSS */
+*, *::before, *::after {
     --azul-escuro: #154580;
     --azul-medio: #3970BE;
     --azul-claro: #E5F1FF;
@@ -9,41 +8,46 @@
     box-sizing: border-box;
 }
 
+/* Estilos Globais */
 body {
-    font-family: Poppins;
-    background-color: var(--azul-claro);
+    font-family: 'Poppins', sans-serif;
     position: relative;
-    width: 100%;
+    width: 80%;
     height: 100vh;
     overflow: auto;
     font-size: 14px;
     color: white;
     box-sizing: border-box;
     text-align: center;
+    margin: 0 auto;
 }
 
-/* ESTILOS DO HEADER */
+.home {
+    background-color: var(--azul-claro);
+}
 
+/* Estilos do Header */
 .cabecalho {
-    background-color: 	#ffffff;
+    background-color: #ffffff;
     top: 0;
     height: 80px;
     width: 100%;
     padding: 0 25px;
     z-index: 2;
 }
-.cabecalho a{
+
+.cabecalho a {
     text-decoration: none;
     color: white;
-    font-family: Poppins;
     font-size: 14px;
     margin: 10px;
     padding: 10px;
+    font-family: 'Poppins', sans-serif;
 }
 
-.users{
+.users {
     color: white;
-  padding: 6px;
+    padding: 6px;
     background-color: #c9c9ff;
     border-radius: 10px;
     margin-right: 10px;
@@ -57,24 +61,15 @@ body {
     cursor: pointer;
 }
 
-.footer{
-   background-color:	#ffffff;
-   width: 100%;
-    position: fixed;
-    bottom: 0;
-    text-align: center;
-    font-family: sans-serif;
-    color: white;
-    text-decoration: none;
-    height:30px;
+.footer {
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 3%;
+    height: 5%;
 }
 
-.direitos-footer{
-    color: #c9c9ff;
-    font-family: Poppins;
-        text-align: center;
-   padding-top: 10px;
-    margin-top: 900px;
+.direitos-footer {
+    color: darkgray;
 }
 
 .cabecalho__videos {
@@ -90,11 +85,9 @@ body {
     padding: 5px 10px;
     border-radius: 10%;
     background-color: #c9c9ff;
-
 }
 
-/* ESTILOS DA SEÇÃO VÍDEOS */
-
+/* Estilos da Seção Vídeos */
 .videos__container {
     color: black;
 }
@@ -131,50 +124,4 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     border: 1px solid rgb(211, 211, 211);
-    background-color: #F9F9F9;
-    border-left: none;
-    padding: 15px 15px;
-    cursor: pointer;
-}
-
-@media(min-width: 834px) {
-
-    body {
-        height: 100vh;
-    }
-
-}
-
-#divForm{
-    height: 60%;
-    margin-top: 10%;
-
-}
-#divForm a{
-color: lightgray;
-    text-decoration: none;
-    font-size: 14px;
-    margin-left: 75%;
-}
-#divForm h1{
-color: #c9c9ff;
-    font-family: Poppins;
-}
-#divForm input{
-    background-color:#ffffff;
-    color: #b2b2f6;
-    font-family: Poppins;
-}
-
-#divForm button{
-    background-color: #c9c9ff ;
-    border-color: #c9c9ff;
-}
-.descricao-video a{
-    font-family: Poppins;
-
-}
-.descricao-video h3{
-    font-family: Poppins;
-
 }

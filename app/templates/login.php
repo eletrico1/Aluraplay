@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="../../public/css/reset.css">
 <link rel="stylesheet" href="../../public/css/estilos.css">
 <link rel="stylesheet" href="../../public/css/estilos-form.css">
+<link rel="stylesheet" href="../../public/css/login.css">
 
     <!-- Inform modern browsers that this page supports both dark and light color schemes,
     and the page author prefers light. -->
@@ -36,7 +37,7 @@ integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CX
 <head>
     <title> Login Page System</title>
 </head>
-<body class="">
+<body class="loginScreen">
 <!-- navbar -->
 
         <nav class="navbar navbar-expand-lg bg-body-tertiary" >
