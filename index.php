@@ -51,6 +51,7 @@
         $controller = new usuariosController();
     }
     else {
+
         $controller = new VideoListController();
        // require_once 'app/exibicao-videos.php';
         //abaixo alternativa para direcionar para 404 caso endereço não exista

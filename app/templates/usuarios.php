@@ -9,6 +9,8 @@
     <title>Usuários</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="../../public/css/users.css">
+
 </head>
 
 <body>
@@ -42,8 +44,10 @@ $(document).ready(function() {
         });
     </script>
 </body>
-
+<!-- footer -->
+<footer class="footer">
+    <!-- Copyright -->
+    <a class= "direitos-footer" href="#"> © 2023 Copyright Todos Direitos Reservados</a>
+    <!-- Copyright -->
+</footer>
 </html>
-<?php
-    include_once 'app/templates/fim-html.php';
-?>
