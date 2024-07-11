@@ -61,6 +61,6 @@
                    placeholder="Neste campo, dê o nome do vídeo"
                    id='titulo'/>
         </div>
-
+        <input class="formulario__botao" type="submit" value="Enviar" />
 
         <?php include_once 'app/templates/fim-html.php'; ?>

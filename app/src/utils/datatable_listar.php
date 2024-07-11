@@ -14,8 +14,8 @@ $con = $conexao->conectar();
 
 // Recuperar os registros do banco de dados
     $query_usuarios = "SELECT id, nome, salario, idade , email, adm
-                    FROM usuarios
-                    ORDER BY id DESC
+                    FROM usuarios where fl_deleted = 0
+                    ORDER BY id DESC 
                     LIMIT :inicio , :quantidade"; //LIMIT :inicio, :quantidade
    // var_dump($query_usuarios);
 
@@ -34,10 +34,13 @@ $con = $conexao->conectar();
         $registro[] = $idade;
         $registro[] = $email;
         $registro[] = $adm;
+        if($row_usuario['id'] != 1) {
+            $registro[] = '<button class="btn btn-danger btn-sm btn-excluir" data-id="' . $id . '">Excluir</button>';
+        } else{
+            $registro[] = '';
+        }
         $dados[] = $registro;
     }
-
-//var_dump($dados);
 
 //Cria o array de informações a serem retornadas para o Javascript
     $resultado = [
@@ -47,6 +50,5 @@ $con = $conexao->conectar();
         "data" => $dados // Array de dados com os registros retornados da tabela usuarios
     ];
 
-//var_dump($resultado);
 // Retornar os dados em formato de objeto para o JavaScript
     echo json_encode($resultado);

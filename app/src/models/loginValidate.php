@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST["email"]) && isset($_POST["senha"]) && $conexao != null  ) {
-    $query = $conexao->prepare("SELECT * FROM usuarios WHERE email = ? AND senha = ? ");
+    $query = $conexao->prepare("SELECT * FROM usuarios WHERE email = ? AND senha = ? and fl_deleted = 0 ");
     $query->execute(array($_POST["email"], $_POST["senha"]));
     if ($query->rowCount()){
         $user = $query->fetchAll(PDO::FETCH_ASSOC)[0];

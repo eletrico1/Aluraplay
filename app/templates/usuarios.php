@@ -14,40 +14,24 @@
 </head>
 
 <body>
-<div class="container-md">
+<div class="container-md-12"  style="background-color: whitesmoke; height: 80%; border-radius: 10px;" >
     <h1>Listar Usuários</h1>
-    <table id="datatable" class="display" >
+    <table id="datatable" class="display">
         <thead>
-            <tr>
                 <th>id</th>
                 <th>Nome</th>
                 <th>Salário</th>
                 <th>Idade</th>
                 <th>Email</th>
                 <th>adm</th>
+                <th>Ações</th>
             </tr>
         </thead>
     </table>
 </div>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="../../public/js/usuarios.js"></script>
 
-    <script>
-$(document).ready(function() {
-    $('#datatable').DataTable({
-                "processing": true,
-                "serverSide": true,
-                "ajax": "app/src/utils/datatable_listar",
-                language: {
-        url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/pt-BR.json',}
-            });
-        });
-    </script>
-</body>
-<!-- footer -->
-<footer class="footer">
-    <!-- Copyright -->
-    <a class= "direitos-footer" href="#"> © 2023 Copyright Todos Direitos Reservados</a>
-    <!-- Copyright -->
-</footer>
-</html>
+
+<?php include_once 'app/templates/fim-html.php'; ?>

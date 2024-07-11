@@ -40,33 +40,15 @@ integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CX
 <body class="loginScreen">
 <!-- navbar -->
 
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" >
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">ytoShare</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                     </button>
-                         <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                         <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Admin Panel</a>
-                        </li>
-                      <li class="nav-item">
-                    <a class="nav-link" href="#">Logout</a>
-                 </li>
-                <li class ="nav-item">
-               <form class="ms-auto d-flex" style="margin-top:5%">
-            <div class="form-check form-switch tooltip-demo">
+
+            <div class="form-check form-switch tooltip-demo" style="float: right">
         <input class="form-check-input" type="checkbox" id="toggle-btn" title="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Toggle Dark Mode or press [D] hot-key">
       <label class="form-check-label" for="toggle-btn">Modo Escuro</label>
-    </form>
-   </li>
-</ul>
+
 </div>
-        </nav>
         <!-- form container login-->
-        <div id="divForm">
-        <div class="container-sm">
+        <div id="divForm" style="height: 85%;">
+        <div class="container-sm" style="padding-top: 100px">
             <form action="/loginValidate" method="post">
                 <h1>Faça o login abaixo </h1>
                 <input class="form-control form-control-lg" type="text"  id="email" name="email" placeholder="Email" aria-label="default input example">
@@ -75,9 +57,10 @@ integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CX
                 <br>
                 <button type="submit" class="btn btn-success btn-lg" value="enviar" name="enviar">Entrar</button>
         </div>
-            <a href="../../index.php"> Não possui acesso? Crie um aqui!</a>
         </div>
 <?php
     include_once 'app/templates/fim-html.php' ?>
+<a href="../../index.php"> Não possui acesso? Crie um aqui!</a>
+
 </body>
 </html>
